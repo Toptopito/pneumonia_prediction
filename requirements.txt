@@ -4,3 +4,4 @@ gradio
 numpy
 pandas <2.0.0
 pathlib
+timm

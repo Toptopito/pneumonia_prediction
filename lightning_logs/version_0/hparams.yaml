@@ -1,0 +1,8 @@
+f1_metric_threshold: 0.4
+freeze_backbone: false
+init_lr: 0.0001
+model_name: resnet50
+num_classes: 15
+optimizer_name: Adam
+use_scheduler: true
+weight_decay: 0.0001

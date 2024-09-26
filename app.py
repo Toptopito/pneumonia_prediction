@@ -2,8 +2,16 @@ import gradio as gr
 
 from fastai.vision.all import *
 
+
+# Setup test mode or not
+test = True
+
 # load model
-learn = load_learner('./model.pkl')
+if test:
+    learn = load_learner('test_model.pkl')
+else:
+    learn = load_learner('model.pkl')
+
 
 categories = ('CLEAR', 'PNEUMONIA')
 
@@ -16,7 +24,7 @@ examples = ['./unseen_data/NORMAL/NORMAL2-IM-1427-0001.jpeg',
             './unseen_data/NORMAL/NORMAL2-IM-1430-0001.jpeg',
             './unseen_data/PNEUMONIA/person1946_bacteria_4875.jpeg']
 
-title = 'Pneumonia X-Ray Classifier'
+title = 'Chest X-Ray Classifier'
 
 description = """An X-Ray classifier trained on the Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification dataset with fastai. 
 License: CC BY 4.0
